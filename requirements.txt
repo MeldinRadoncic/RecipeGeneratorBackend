@@ -6,6 +6,6 @@ langchain-core==0.2.5
 langchain-text-splitters==0.2.1
 langsmith==0.1.75
 openai==1.33.0
-opython-dotenv==1.0.1
+python-dotenv==1.0.1
 replicate==0.26.0
 Werkzeug==3.0.3
