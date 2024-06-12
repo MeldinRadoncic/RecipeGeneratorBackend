@@ -13,7 +13,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ["https://recipe-generator-react-mu.vercel.app/","http://localhost:3000"]}})
+CORS(app)
 
 
 # Load API keys
@@ -22,6 +22,11 @@ REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
 # Initialize OpenAI API
 llm = OpenAI(model="gpt-3.5-turbo-instruct")
+
+# Home route
+@app.route('/')
+def index():
+    return "Hello, World!"
 
 @app.route('/api/generate_recipe', methods=['POST'])
 def generate_recipe():
