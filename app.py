@@ -13,7 +13,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ["https://recipe-generator-react-mu.vercel.app/"]}})
+CORS(app)
 
 
 # Load API keys
